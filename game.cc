@@ -81,13 +81,13 @@ void Game::CreateOpponents() {
 
 void Game::UpdateScreen() {
   imagebox.DrawRectangle(0, 0, imagebox.GetWidth(), imagebox.GetHeight(),
-                          graphics::Color(255, 255, 255));
+                         graphics::Color(255, 255, 255));
   std::string score_str_ = "Score: " + std::to_string(score_);
   imagebox.DrawText(10, 10, score_str_, 30, 0, 0, 0);
   if (lost_game_ == true) {
     imagebox.DrawText((imagebox.GetWidth() * 0.5) - 200,
-                       (imagebox.GetHeight() * 0.5) - 200, "GAME OVER", 80,
-                       255, 20, 20);
+                      (imagebox.GetHeight() * 0.5) - 200, "GAME OVER", 80, 255,
+                      20, 20);
   }
 
   if (player_.GetIsActive()) {
